@@ -1,11 +1,10 @@
 #include<stdio.h>
 void main()
 {
-    int r2,r3,r4,r1;
+    int rem;
 	int num;
 	int org;
-	int sum=0;
-	
+	int rev =0;
 	
 	printf("Enter number: ");
 	scanf("%d",&num);
@@ -14,18 +13,18 @@ void main()
 	while(num != 0)
 	{
 	
-	r1=num%10;
-	r1=r1*r1*r1;
-	sum=sum+r1;
+	rem=num%10;
+	rev = (rev*10)+rem;
 	num=num/10;
 
 	}
 	
-	if(sum==org)
+	if(org==rev)
 	{
-		printf("Number is armstrong");
+		printf("Number is palindrome");
 	}
-	else{
-		printf("Number is not armstrong");
+	else
+	{
+		printf("Number is not palindrome");
 	}
 }

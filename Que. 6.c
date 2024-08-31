@@ -1,14 +1,31 @@
 #include<stdio.h>
 void main()
 {
-	int maleage= 24, femaleage=17;
-	if(maleage >= 21 && femaleage >= 18)
+	int num;
+	int org;
+	int sum=0;
+	int i =1;
+	
+	
+	printf("Enter number: ");
+	scanf("%d",&num);
+	
+	org = num;
+	while(i < num)
 	{
-		
-		printf("Person is eligible to marry");
+	if(num % i == 0)
+	{
+		sum = sum + i;
 	}
-	else
+	i++;
+	
+	}
+	
+	if(sum==org)
 	{
-		printf("Person is not eligible to marry");
+		printf("Number is perfect number");
+	}
+	else{
+		printf("Number is not perfect");
 	}
 }
