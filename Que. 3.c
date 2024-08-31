@@ -1,28 +1,48 @@
 #include<stdio.h>
 void main()
 {
-	int num, r1, q1, r2, q2, sum, rev= 0;
-	printf("Enter 3 digit number: ");
-	scanf("%d", &num);
-	if(num >= 100 && num <= 999)
+	int num1, num2, a, b, c;
+	int sum= 0;
+	char choice;
+	printf("Enter First Number: ");
+	scanf("%d",&a);
+	fflush(stdin);
+	printf("Enter Second Number: ");
+	scanf("%d",&b);
+	fflush(stdin);
+	printf("Enter choice (Sum = +, Subtraction = -,  Multiplication = *, Division = /, Mod = %): ");
+	scanf("%c",&choice);
+	if(a>=0)
 	{
-		//Addition of all digits in given number..
-		r1 = num % 10;
-		q1 = num / 10;
-		r2 = q1 % 10;
-		q2 = q1 / 10;
-		sum = q2 + r2 + r1;
-		printf("%d is the sum of all digit in given number \n", sum);
-		
-		//Reverse the given number
-		rev = (rev * 10) + r1;
-		rev = (rev * 10) + r2;
-		rev = (rev * 10) + q2;
-		printf("%d is the reverse of given number", rev);
+		if(choice=='+')
+		{
+			c=a+b;
+			printf("sum of numbers are %d",c);
+		}
+		if(choice=='-')
+		{
+			c=a-b;
+			printf("subtraction of numbers are %d",c);
+		}
+		if(choice=='*')
+		{
+			c=a*b;
+			printf("multi of numbers are %d",c);
+		}
+		if(choice=='/')
+		{
+			c=a/b;
+			printf("division of numbers are %d",c);
+		}
+		if(choice=='%')
+		{
+			c=a%b;
+			printf("mod of numbers are %d",c);
+		}
 	}
 	else
 	{
-		printf("Enter valid number");
+		printf("Enter valid choice");
 	}
 	
 }

@@ -1,22 +1,44 @@
 #include<stdio.h>
 void main()
 {
-	int basic = 7777; 
-	int da, ta, hra, tsalary;
-	if(basic <= 5000)
+	char choice;
+	printf("Are you a student Yes(y) or no(n): ");
+	scanf("%c",&choice);
+	float purchase, discount, finalprice;
+	printf("Enter the purchace price: ");
+	scanf("%f",&purchase);
+	if(choice=='y')
 	{
-		da = basic*0.10;
-		ta = basic*20;
-		hra = basic*25;
-		tsalary = basic + da + ta + hra;
-		printf("Total salary is %d", tsalary); 
+		if(purchase>500)
+		{
+			discount=800*20/100;
+			printf("Discount price: %f\n",discount);
+			finalprice=purchase-discount;
+			printf("final price=%f",finalprice);
+		}
+		else
+		{
+			discount=800*10/100;
+			printf("Discount price: %f\n",discount);
+			finalprice=purchase-discount;
+			printf("final price=%f",finalprice);
+		}
 	}
 	else
 	{
-		da = basic*0.15;
-		ta = basic*0.25;
-		hra = basic*0.30;
-		tsalary =  basic + da + ta + hra;
-		printf("Total salary is %d", tsalary);
+		if(choice=='n')
+		{
+			if(purchase>600)
+			{
+				discount=800*15/100;
+				printf("Discount price: %f\n",discount);
+				finalprice=purchase-discount;
+				printf("final price=%f",finalprice);
+			}
+			else
+			{
+				printf("There is ni discount");
+			}
+		}
 	}
 }
